@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Noor Wael | Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+
+<header>
+    <div class="theme-toggle">
+        <button id="dark-mode-btn" aria-label="Toggle Dark Mode">
+            <i class="fas fa-moon"></i>
+        </button>
+    </div>
+    <img src="profile.jpg" alt="Noor Wael" class="profile">
+    <h1>Noor Wael</h1>
+    <p class="subtitle">MICT Student @ American University in Cairo</p>
+    <nav>
+        <a href="#about"><i class="fas fa-user"></i> About</a>
+        <a href="#skills"><i class="fas fa-code"></i> Skills</a>
+        <a href="#projects"><i class="fas fa-briefcase"></i> Projects</a>
+        <a href="#contact"><i class="fas fa-envelope"></i> Contact</a>
+    </nav>
+</header>
+
+<main>
+    <section id="about">
+        <h2>Profile</h2>
+        <p>I am a Management Information and Communication Technology student at AUC, set to graduate in 2026. I specialize in bridging the gap between complex technical systems and strategic business management.</p>
+        <p>My goal is to develop digital solutions that drive innovation and efficiency in global organizations.</p>
+    </section>
+
+    <section id="skills">
+        <h2>Technical Skills</h2>
+        <div class="skills-vertical">
+            <div class="skill-block">
+                <h3><i class="fas fa-laptop-code" style="color: var(--accent); margin-right: 8px;"></i> Programming</h3>
+                <ul>
+                    <li>C</li>
+                    <li>C++</li>
+                    <li>Java</li>
+                    <li>JavaScript (ES6+)</li>
+                    <li>HTML5 & CSS3</li>
+                </ul>
+            </div>
+            <div class="skill-block">
+                <h3><i class="fas fa-chart-bar" style="color: var(--accent); margin-right: 8px;"></i> Data & Analytics</h3>
+                <ul>
+                    <li>SQL (PostgreSQL/MySQL)</li>
+                    <li>Database Management</li>
+                    <li>Power BI</li>
+                    <li>Microsoft Excel (Advanced)</li>
+                </ul>
+            </div>
+            <div class="skill-block">
+                <h3><i class="fas fa-tools" style="color: var(--accent); margin-right: 8px;"></i> Professional Tools</h3>
+                <ul>
+                    <li>GitHub & Git</li>
+                    <li>Microsoft Office Suite</li>
+                    <li>Canva & UI/UX Design</li>
+                    <li>Project Management</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <section id="projects">
+        <h2>Projects & Experience</h2>
+        <div class="project-card">
+            <h3>Super Mario Engine</h3>
+            <p>A 2D game engine built with <strong>C++</strong>. Focuses on collision physics, sprite rendering, and memory management.</p>
+        </div>
+        <div class="project-card">
+            <h3>Concert Ticketing Platform</h3>
+            <p>A full-stack web application developed with <strong>JavaScript</strong>. Includes dynamic seating and booking logic.</p>
+        </div>
+        <div class="project-card">
+            <h3>Professional Internships</h3>
+            <ul>
+                <li><strong>Rable.tech:</strong> Business Planning Intern</li>
+                <li><strong>One Inn Hotel:</strong> Hotel Manager Assistant</li>
+            </ul>
+        </div>
+        
+        <div class="api-area">
+            <h3><i class="fab fa-github"></i> Live GitHub Repositories</h3>
+            <div id="repos-container">
+                <div class="spinner"></div>
+                <p style="text-align: center; color: var(--text-muted);">Connecting to API...</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact">
+        <h2>Contact</h2>
+        <p>Let's discuss technology and business innovation.</p>
+        <div class="contact-box">
+            <a href="mailto:noorwael@aucegypt.edu" class="btn"><i class="fas fa-paper-plane"></i> Email Me</a>
+            <a href="https://linkedin.com/in/noorwael" target="_blank" rel="noopener noreferrer" class="btn"><i class="fab fa-linkedin"></i> LinkedIn</a>
+        </div>
+    </section>
+</main>
+
+<button id="backToTop" aria-label="Back to top"><i class="fas fa-arrow-up"></i></button>
+
+<footer>
+    <p>&copy; 2026 Noor Wael | Web-Based Systems Assignment 3 Extension</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>

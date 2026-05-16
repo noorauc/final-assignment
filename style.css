@@ -1,0 +1,323 @@
+:root {
+    --bg: #f8fafc;
+    --card: #ffffff;
+    --text: #0f172a;
+    --text-muted: #475569;
+    --accent: #2563eb;
+    --accent-hover: #1d4ed8;
+    --border: #e2e8f0;
+    --shadow: rgba(15, 23, 42, 0.05);
+}
+
+.dark-theme {
+    --bg: #0f172a;
+    --card: #1e293b;
+    --text: #f8fafc;
+    --text-muted: #94a3b8;
+    --accent: #3b82f6;
+    --accent-hover: #60a5fa;
+    --border: #334155;
+    --shadow: rgba(0, 0, 0, 0.25);
+}
+
+html { 
+    scroll-behavior: smooth; 
+}
+
+body {
+    font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+    background-color: var(--bg);
+    color: var(--text);
+    margin: 0;
+    line-height: 1.6;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Header Styling */
+header {
+    background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%);
+    color: white;
+    text-align: center;
+    padding: 100px 20px 80px 20px;
+    position: relative;
+    border-bottom: 1px solid var(--border);
+}
+
+.profile {
+    width: 140px;
+    height: 140px;
+    border-radius: 50%;
+    border: 4px solid var(--accent);
+    object-fit: cover;
+    margin-bottom: 20px;
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease;
+}
+
+.profile:hover {
+    transform: scale(1.05);
+}
+
+header h1 {
+    margin: 10px 0 5px 0;
+    font-size: 2.5rem;
+    letter-spacing: -0.025em;
+}
+
+.subtitle {
+    font-size: 1.1rem;
+    color: #94a3b8;
+    margin-bottom: 30px;
+}
+
+nav {
+    display: inline-flex;
+    background: rgba(255, 255, 255, 0.05);
+    padding: 8px 16px;
+    border-radius: 30px;
+    backdrop-filter: blur(8px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+nav a {
+    color: #cbd5e1;
+    text-decoration: none;
+    margin: 0 15px;
+    font-weight: 500;
+    font-size: 0.95rem;
+    transition: color 0.2s ease;
+}
+
+nav a:hover {
+    color: white;
+}
+
+/* Theme Toggle Button */
+.theme-toggle { 
+    position: absolute; 
+    top: 25px; 
+    right: 25px; 
+}
+
+#dark-mode-btn { 
+    background: rgba(255, 255, 255, 0.1); 
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    color: white;
+    padding: 12px; 
+    border-radius: 50%; 
+    cursor: pointer; 
+    transition: all 0.2s ease;
+    width: 44px;
+    height: 44px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#dark-mode-btn:hover {
+    background: rgba(255, 255, 255, 0.2);
+    transform: rotate(15deg);
+}
+
+/* Layout Grid & Main Sections */
+main { 
+    max-width: 850px; 
+    margin: 0 auto; 
+    padding: 40px 20px; 
+}
+
+section {
+    background: var(--card);
+    padding: 50px 40px;
+    margin-bottom: 40px;
+    border-radius: 16px;
+    border: 1px solid var(--border);
+    box-shadow: 0 4px 6px -1px var(--shadow);
+}
+
+h2 { 
+    color: var(--accent); 
+    margin-top: 0;
+    margin-bottom: 25px; 
+    font-size: 1.75rem;
+    border-bottom: 2px solid var(--border);
+    padding-bottom: 10px;
+}
+
+#about p {
+    color: var(--text-muted);
+    font-size: 1.05rem;
+}
+
+/* Skills Grid (Upgraded layout) */
+.skills-vertical {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 25px;
+}
+
+.skill-block h3 {
+    font-size: 1.1rem;
+    margin-bottom: 15px;
+    color: var(--text);
+}
+
+.skill-block ul { 
+    list-style: none; 
+    padding: 0; 
+    margin: 0;
+}
+
+.skill-block li { 
+    padding: 10px 12px; 
+    background: var(--bg);
+    margin-bottom: 8px;
+    border-radius: 8px;
+    font-size: 0.95rem;
+    border: 1px solid var(--border);
+    color: var(--text-muted);
+}
+
+/* Project Cards */
+.project-card { 
+    margin-bottom: 25px; 
+    padding: 20px; 
+    background: var(--bg);
+    border-radius: 12px;
+    border: 1px solid var(--border);
+}
+
+.project-card h3 {
+    margin-top: 0;
+    margin-bottom: 10px;
+    color: var(--text);
+}
+
+.project-card p {
+    color: var(--text-muted);
+    margin-bottom: 15px;
+}
+
+.project-card ul {
+    padding-left: 20px;
+    color: var(--text-muted);
+}
+
+/* API Repos Section */
+.api-area {
+    margin-top: 40px;
+    padding-top: 30px;
+    border-top: 1px dashed var(--border);
+}
+
+.repo-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.repo-card { 
+    background: var(--card); 
+    padding: 20px; 
+    border-radius: 10px; 
+    border: 1px solid var(--accent); 
+    box-shadow: 0 2px 4px var(--shadow);
+    transition: transform 0.2s ease;
+}
+
+.repo-card:hover {
+    transform: translateY(-2px);
+}
+
+.repo-card h4 {
+    margin: 0 0 8px 0;
+    color: var(--accent);
+    font-size: 1.1rem;
+}
+
+.repo-card p {
+    margin: 0 0 15px 0;
+    font-size: 0.9rem;
+    color: var(--text-muted);
+}
+
+/* Buttons & UI Controls */
+.contact-box {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.btn { 
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 12px 24px; 
+    background: var(--accent); 
+    color: white; 
+    text-decoration: none; 
+    border-radius: 8px; 
+    font-weight: 600;
+    transition: background 0.2s ease, transform 0.1s ease;
+}
+
+.btn:hover { 
+    background: var(--accent-hover); 
+    transform: translateY(-1px);
+}
+
+#backToTop { 
+    display: flex; 
+    align-items: center;
+    justify-content: center;
+    position: fixed; 
+    bottom: 30px; 
+    right: 30px; 
+    background: var(--accent); 
+    color: white; 
+    border: none; 
+    width: 48px;
+    height: 48px;
+    border-radius: 50%; 
+    cursor: pointer; 
+    box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+    transition: all 0.2s ease;
+    opacity: 0;
+    visibility: hidden;
+    z-index: 999;
+}
+
+#backToTop.show {
+    opacity: 1;
+    visibility: visible;
+}
+
+#backToTop:hover {
+    background: var(--accent-hover);
+    transform: scale(1.1);
+}
+
+/* Spinner Animation */
+.spinner { 
+    border: 3px solid var(--border); 
+    border-top: 3px solid var(--accent); 
+    border-radius: 50%; 
+    width: 30px; 
+    height: 30px; 
+    animation: spin 0.8s linear infinite; 
+    margin: 30px auto; 
+}
+
+@keyframes spin { 
+    0% { transform: rotate(0deg); } 
+    100% { transform: rotate(360deg); } 
+}
+
+footer {
+    text-align: center;
+    padding: 40px 20px;
+    color: var(--text-muted);
+    font-size: 0.9rem;
+    border-top: 1px solid var(--border);
+}
